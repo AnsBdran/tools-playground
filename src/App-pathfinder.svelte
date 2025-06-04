@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
 	import { click, goto, pattern, prefs, state as pathState } from 'svelte-pathfinder';
 	import Nav from './lib/nav.svelte';
 	import type { Component as SvelteComponentType } from 'svelte';
@@ -53,28 +52,11 @@
 
 <svelte:window onclick={click} />
 <RenderScan />
-<div class="w-full p-4 min-h-screen flex flex-col gap-24">
-	<Nav />
+<div class="w-full p-4 min-h-screen relative">
+	<Nav class="bg-violet-900 text-white fixed top-0 left-0 right-0 z-10 py-2 px-4" />
 	{#if Component}
 		<div class:transitioning={isTransitioning}>
 			<Component {params} />
 		</div>
 	{/if}
 </div>
-<!-- 
-<style>
-	.transitioning {
-		view-transition-name: page;
-	}
-	::view-transition-old(page),
-	::view-transition-new(page) {
-		animation: none;
-		mix-blend-mode: normal;
-	}
-	::view-transition-old(page) {
-		z-index: 1;
-	}
-	::view-transition-new(page) {
-		z-index: 2;
-	}
-</style> -->

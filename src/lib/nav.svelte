@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { link } from '@dvcol/svelte-simple-router';
+	const { class: className = '' } = $props();
 </script>
 
-<nav>
+<nav class={className}>
 	<ul class="flex gap-4">
 		<li>
 			<a href="/" use:link>Home</a>
