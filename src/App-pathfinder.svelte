@@ -52,7 +52,7 @@
 
 <svelte:window onclick={click} />
 <RenderScan />
-<div class="w-full p-4 min-h-screen relative">
+<div class="w-full p-4 min-h-screen pt-16 relative">
 	<Nav class="bg-violet-900 text-white fixed top-0 left-0 right-0 z-10 py-2 px-4" />
 	{#if Component}
 		<div class:transitioning={isTransitioning}>
