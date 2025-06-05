@@ -15,7 +15,7 @@
 	import Home from './routes/home.svelte';
 	import About from './routes/about.svelte';
 	import Login from './routes/login.svelte';
-	import { AppState } from './App.state.svelte';
+	import { AppState } from './App.state.svelte.ts';
 	import { RenderScan } from 'svelte-render-scan';
 	import { scrollY } from 'svelte/reactivity/window';
 	import { watch } from 'runed';
