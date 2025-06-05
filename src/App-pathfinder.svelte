@@ -3,6 +3,8 @@
 	import Nav from './lib/nav.svelte';
 	import type { Component as SvelteComponentType } from 'svelte';
 	import { RenderScan } from 'svelte-render-scan';
+	import { scrollY } from 'svelte/reactivity/window';
+
 	const routes = [
 		['/', import('./routes/home.svelte')],
 		['/about', import('./routes/about.svelte')],
@@ -13,7 +15,7 @@
 	let Component: SvelteComponentType | null = $state(null);
 	let isTransitioning = $state(false);
 
-	prefs.scroll = true;
+	// prefs.scroll = true;
 	$inspect(Component);
 	$effect(() => {
 		let matched = false;
