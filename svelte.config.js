@@ -5,8 +5,5 @@ export default {
 	// Consult https://svelte.dev/docs#compile-time-svelte-preprocess
 	// for more information about preprocessors
 	preprocess: vitePreprocess(),
-	adapter: adapter({
-		edge: false,
-		split: false
-	})
+	adapter: adapter({})
 };
