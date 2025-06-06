@@ -20,7 +20,8 @@
 	import { scrollY } from 'svelte/reactivity/window';
 	import { watch } from 'runed';
 	import { onDestroy } from 'svelte';
-
+	import { fade } from 'svelte/transition';
+	import { transition } from '@dvcol/svelte-simple-router/utils';
 	const RouteName = {
 		Home: 'home',
 		About: 'about',
@@ -94,7 +95,10 @@
 <div class=" p-4 pt-16 flex flex-col gap-24f w-full">
 	<RouterContext {options}>
 		<Nav />
-		<RouterView />
+		<div in:fade={{ duration: 1000 }}>
+			<RouterView {transition} />
+		</div>
+
 		<RouteDebugger />
 	</RouterContext>
 	<RenderScan />
