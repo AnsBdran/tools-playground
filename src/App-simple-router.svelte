@@ -24,7 +24,8 @@
 	const RouteName = {
 		Home: 'home',
 		About: 'about',
-		Login: 'login'
+		Login: 'login',
+		Any: 'any'
 	} as const;
 
 	type RouteNames = (typeof RouteName)[keyof typeof RouteName];
@@ -44,6 +45,13 @@
 			name: RouteName.Login,
 			path: '/login',
 			component: Login
+		},
+		{
+			name: RouteName.Any,
+			path: '*',
+			redirect: {
+				name: RouteName.Home
+			}
 		}
 	];
 
@@ -69,7 +77,8 @@
 			}
 			// console.log('scrollTo found old value', routesYScroll[thing.to.route.path]);
 			window.scrollTo({ top: appState.scroll[thing.to.route.path], behavior: 'instant' });
-		}
+		},
+		failOnNotFound: true
 		// logLevel: 3
 	} as const;
 	onDestroy(() => {});

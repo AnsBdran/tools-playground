@@ -23,6 +23,9 @@
 			<a href="/login" use:active>Login</a>
 		</li>
 		<li>
+			<a href="/not-found">redirect =&gt; /</a>
+		</li>
+		<li>
 			<span>
 				{scrollY.current}
 			</span>
