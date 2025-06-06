@@ -3,4 +3,4 @@
 </script>
 
 <h1>Login</h1>
-<DummyContent />
+<DummyContent content="Login page" />

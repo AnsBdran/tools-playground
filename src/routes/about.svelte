@@ -3,4 +3,4 @@
 </script>
 
 <h1>About</h1>
-<DummyContent />
+<DummyContent content="About page" />

@@ -69,7 +69,14 @@
 <div class=" p-4 pt-16 flex flex-col gap-24f w-full">
 	<RouterContext {options}>
 		<Nav />
-		<RouterView {transition} />
+		<RouterView {transition}>
+			{#snippet routing()}
+				<p>routing...</p>
+			{/snippet}
+			{#snippet loading()}
+				<p>loading...</p>
+			{/snippet}
+		</RouterView>
 		<RouteDebugger />
 	</RouterContext>
 	<RenderScan />
