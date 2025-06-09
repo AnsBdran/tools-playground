@@ -17,6 +17,9 @@ importers:
       runed:
         specifier: ^0.28.0
         version: 0.28.0(svelte@5.33.14)
+      sv-router:
+        specifier: ^0.5.0
+        version: 0.5.0(svelte@5.33.14)
       svelte-pathfinder:
         specifier: ^4.8.1
         version: 4.8.1(svelte@5.33.14)
@@ -1291,6 +1294,12 @@ packages:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
 
+  sv-router@0.5.0:
+    resolution: {integrity: sha512-e0DAWLE3XO6iSYf60fTIg/NYm716Q1pLN6bZVQcYEXrMGZ6oHdzJF9gF+YQIPki1xzHQF0fGfjfstSHJ/WTtYA==}
+    hasBin: true
+    peerDependencies:
+      svelte: ^5
+
   svelte-check@4.2.1:
     resolution: {integrity: sha512-e49SU1RStvQhoipkQ/aonDhHnG3qxHSBtNfBRb9pxVXoa+N7qybAo32KgA9wEb2PCYFNaDg7bZCdhLD1vHpdYA==}
     engines: {node: '>= 18.0.0'}
@@ -2514,6 +2523,11 @@ snapshots:
   supports-color@7.2.0:
     dependencies:
       has-flag: 4.0.0
+
+  sv-router@0.5.0(svelte@5.33.14):
+    dependencies:
+      esm-env: 1.2.2
+      svelte: 5.33.14
 
   svelte-check@4.2.1(picomatch@4.0.2)(svelte@5.33.14)(typescript@5.8.3):
     dependencies:

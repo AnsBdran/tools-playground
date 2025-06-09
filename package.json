@@ -38,6 +38,7 @@
 		"@dvcol/svelte-simple-router": "^2.7.2",
 		"idb-keyval": "^6.2.2",
 		"runed": "^0.28.0",
+		"sv-router": "^0.5.0",
 		"svelte-pathfinder": "^4.8.1"
 	},
 	"pnpm": {

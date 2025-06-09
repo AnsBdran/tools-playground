@@ -82,9 +82,44 @@ button:focus-visible {
 	}
 }
 
-[data-active='true'] {
+a.is-active {
 	/* background-color: red; */
 	/* font-weight: bold; */
 	border-bottom: 2px solid red;
 	color: var(--color-violet-100);
+}
+
+/* transition styles */
+@keyframes move-out {
+	from {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+
+	to {
+		transform: translateY(-100%);
+		opacity: 0.3;
+	}
+}
+
+@keyframes move-in {
+	from {
+		transform: translateY(100%);
+		opacity: 0.3;
+	}
+
+	to {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+/* Apply the custom animation to the old and new page states */
+
+::view-transition-old(root) {
+	animation: 0.3s cubic-bezier(0.4, 0, 0.2, 1) both move-out;
+}
+
+::view-transition-new(root) {
+	animation: 0.3s cubic-bezier(0.4, 0, 0.2, 1) both move-in;
 }

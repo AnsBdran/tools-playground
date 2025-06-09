@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { click, goto, pattern, prefs, state as pathState } from 'svelte-pathfinder';
-	import Nav from './lib/nav.svelte';
+	import { click, goto, pattern, state as pathState } from 'svelte-pathfinder';
+	import Nav from './lib/nav-simple-router.svelte';
 	import type { Component as SvelteComponentType } from 'svelte';
 	import { RenderScan } from 'svelte-render-scan';
 	import { scrollY } from 'svelte/reactivity/window';
